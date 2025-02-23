@@ -1,11 +1,11 @@
-import {Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from "react-router-dom";
 
-// ProtectedRoute will now only render the Route inside of a Routes component
-const ProtectedRoute = ({element}) => {
-  const isLoggedIn = localStorage.getItem('authToken'); // Check if the user is logged in
-  
+const ProtectedRoute = ({ element }) => {
+  const isLoggedIn = localStorage.getItem("authToken"); // Check if the user is logged in
+  const location = useLocation();
+
   if (!isLoggedIn) {
-    return <Navigate to="/login/signin" replace />;
+    return <Navigate to="/login/signin" replace state={{ from: location }} />;
   }
 
   return <>{element}</>;
