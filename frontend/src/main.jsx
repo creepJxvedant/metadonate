@@ -7,7 +7,7 @@ import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/MetaDonate">
+    <BrowserRouter basename="/metadonate">
       <App />
     </BrowserRouter>
   </StrictMode>
