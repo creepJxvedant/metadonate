@@ -1,0 +1,5 @@
+.glass {
+    border-radius: 10px;
+    box-shadow: inset 0px 0 2px 0 cyan;
+    backdrop-filter: blur(10px);
+}
