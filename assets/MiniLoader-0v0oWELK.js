@@ -1,0 +1,1 @@
+import{j as s}from"./index-CzFocMGm.js";const e=()=>s.jsxs("div",{className:"flex items-center justify-center space-x-2",children:[s.jsx("span",{className:"bar"}),s.jsx("span",{className:"bar"}),s.jsx("span",{className:"bar"}),s.jsx("span",{className:"bar"}),s.jsx("span",{className:"bar"})]});export{e as M};
