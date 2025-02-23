@@ -8,5 +8,5 @@ export function IsLoggedIn() {
 
 export function HandleLogout() {
   localStorage.removeItem("authToken");
-  window.location.reload();
+  window.location.href = "/login/signin";
 }
