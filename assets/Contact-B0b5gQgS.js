@@ -1,1 +1,0 @@
-import{j as t}from"./index-snCaLdTt.js";const o=()=>t.jsxs("div",{className:"container mx-auto px-4 py-12",children:[t.jsx("h1",{className:"text-4xl font-bold mb-8",children:"Contact Us"}),t.jsx("p",{className:"text-lg",children:"Contact form coming soon..."})]});export{o as default};
