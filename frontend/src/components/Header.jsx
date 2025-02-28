@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import {IsLoggedIn,HandleLogout} from '../secure/IsLoggedIn';
+import { IsLoggedIn, HandleLogout } from '../secure/IsLoggedIn';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(IsLoggedIn());
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -15,7 +16,17 @@ const Header = () => {
     setIsLoggedIn(false);
   };
 
+  useEffect(() => {
+    const checkLoginStatus = () => {
+      setIsLoggedIn(IsLoggedIn());
+    };
 
+    window.addEventListener("loginStatusChange", checkLoginStatus);
+
+    return () => {
+      window.removeEventListener("loginStatusChange", checkLoginStatus);
+    };
+  }, []);
 
   return (
     <header className="bg-white dark:bg-gray-800 shadow-md transition-colors duration-300">

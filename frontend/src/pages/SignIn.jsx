@@ -22,6 +22,7 @@ const SignIn = () => {
 
     if (data.success) {
       localStorage.setItem("authToken", data.authToken);
+      window.dispatchEvent(new Event("loginStatusChange"));
       navigate("/dashboard");
     } else {
       setError(data.message);
