@@ -22,8 +22,8 @@ const SignIn = () => {
 
     if (data.success) {
       localStorage.setItem("authToken", data.authToken);
-      navigate("/dashboard");
       window.location.reload();
+      navigate("/dashboard");
     } else {
       setError(data.message);
     }
