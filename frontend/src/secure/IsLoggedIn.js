@@ -8,6 +8,5 @@ export function IsLoggedIn() {
 
 export function HandleLogout() {
   localStorage.removeItem("authToken");
-  window.location.replace("/login");
   window.location.reload();
 }
